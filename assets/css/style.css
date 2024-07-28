@@ -54,6 +54,59 @@ img {
 
 /* ===================== ===== */
 
+/* PRELOADER AREA */
+.preloader_area {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f1f1f1;
+    z-index: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-loader {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    border:16px solid;
+    border-color:#0771B9 #0000;
+    animation:s1 1s infinite;
+}
+@keyframes s1 {to{transform: rotate(.5turn)}}
+/* PRELOADER AREA END */
+
+/* ===================== ===== */
+
+/* BACK TO TOP BTN */
+.back_to_top {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 5;
+    border-radius: 0;
+    border: 2px solid var(--secondary_color);
+    background: var(--primary_color);
+    display: none;
+    animation: btt 0.8s ease-in;
+}
+.back_to_top:hover {
+    border: 2px solid var(--hover);
+    background: var(--secondary_color);
+}
+@keyframes btt {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+/* BACK TO TOP BTN END */
+
+/* ===================== ===== */
+
 /* WELCOME AREA */
 .welcome_part {
     background: var(--primary_color);
@@ -70,8 +123,43 @@ img {
 /* ===================== ===== */
 
 /* MENU AREA */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: white;
+    transition: 0.5s;
+}
+
 .nav-link:hover {
     color: var(--secondary_color);
+}
+.primary_color {
+    background: var(--primary_color);
+    animation: bgDown 0.7s ease-out;
+}
+@keyframes bgDown {
+    /* 0% / */ from { 
+        transform: translateY(-100px);
+    }
+    /* 100% / */ to {
+        transform: translateY(0px);
+    }
+}
+.primary_color .nav-link {
+    color: #fff;
+}
+.primary_color .nav-link:hover {
+    color: var(--secondary_color);
+}
+.last_logo {
+    display: none;
+}
+.primary_color .first_logo {
+    display: none;
+}
+.primary_color .last_logo {
+    display: block;
 }
 /* MENU AREA END */
 
@@ -96,15 +184,15 @@ img {
     line-height: 1.7;
 }
 .hero_btn a {
-    background: var(--primary_color);
-    border: 2px solid transparent;
-    border-radius: 0;
-    font-family: var(--fontOswald);
-    text-transform: uppercase;
-}
-.hero_btn a:hover {
+    /* background: var(--primary_color); */
     background: transparent;
     border: 2px solid #fff;
+    border-radius: 0;
+    font-family: var(--fontOswald);
+}
+.hero_btn a:hover {
+    background: var(--primary_color);
+    border: 2px solid #0771b9;
 }
 /* HERO AREA END */
 
@@ -184,6 +272,22 @@ img {
     line-height: 1.5;
 }
 /* SERVICE AREA END */
+
+/* ===================== ===== */
+
+/* COUNTERUP AREA */
+.counterup_con h3, 
+.counterup_con h5, 
+.counterup_con h3 span {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: var(--fontOswald);
+}
+.counterup_con h5 {
+    font-size: 22px;
+    font-weight: 400;
+} 
+/* COUNTERUP AREA END */
 
 /* ===================== ===== */
 

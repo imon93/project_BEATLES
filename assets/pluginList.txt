@@ -1,0 +1,12 @@
+PreLoader
+BG On Scroll
+Back To Top
+Venobox / Lightbox / Magnifying popup
+CountDown
+CounterUp
+
+Mixitup
+Slider
+Animation CSS
+
+Particle
